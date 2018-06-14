@@ -1,0 +1,30 @@
+ #map {
+     height: 95vh;
+}
+ html, body {
+     margin: 10;
+     padding: 10;
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+ .heading{
+     color:#ffffff;
+}
+ .nav-item{
+     background-color:white;
+     padding:2px;
+     margin:5px;
+}
+ .row{
+     background-color: #ff1a1a;
+     border:solid black 2px;
+}
+ @media screen and (min-width: 767px) {
+     main {
+         flex-direction: rows;
+         position: relative;
+         padding:5px;
+         background-color: white;
+    }
+}
+ 
