@@ -3,7 +3,8 @@ var vizag= [
         title: 'Kailasagiri',
         lat: 17.7015185,
         long: 83.1279537,
-        type: 'Tourist Attraction'
+        type: 'Tourist Attraction',
+        url:'https://en.wikipedia.org/wiki/Kailasagiri'
     },
 
     {
@@ -14,10 +15,10 @@ var vizag= [
     },
 
     {
-        title: 'Sivaji Park',
-        lat: 17.7384734,
-        long: 83.1924984,
-        type: 'City Green Space'
+        title: 'Bheemili Beach',
+        lat: 17.8894406,
+        long: 83.4499698,
+        type: 'Beach'
     },
 
     {
@@ -49,9 +50,9 @@ var vizag= [
     },
 
     {
-        title: 'Talasila Hotel',
-        lat: 17.7297196,
-        long: 83.2985877,
-        type: 'Modern hotel'
+        title: 'Vuda Park',
+        lat: 17.7240894,
+        long: 83.3373408,
+        type: 'PARK'
     },
 ];
