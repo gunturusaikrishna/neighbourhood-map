@@ -128,7 +128,7 @@ function initMap() {
     // Berlin city center 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 17.7384734, lng: 82.9823849},
-        zoom: 13
+        zoom: 10
     });
 
     // use "retro" map style
