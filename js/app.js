@@ -68,14 +68,14 @@ function setFoursquareContent(infowindow) {
 
     // fetch data from Foursquare
     $.getJSON(url).done(function(marker) {
-        response = marker.response.venues[0];
+         response = marker.response.venues[0];
 
         // parse Foursquare response
         var name = response.name || 'no name found';
-        var street = response.location.formattedAddress[0];
-        var city = response.location.formattedAddress[1];
+        var street = response.location.formattedAddress[0] || 'no street found';
+        var city = response.location.formattedAddress[1] || 'no city found';
         var country = response.location.country || 'no country found';
-        var category = response.categories[0].name;
+        var category = response.categories[0].name || 'no category found';
         var url = response.url || 'no url found';
         var visitors = response.hereNow.summary || 'no visitors found';
 
@@ -83,8 +83,7 @@ function setFoursquareContent(infowindow) {
         content =
             '<h6>' + name + '</h6><p><i>' + category + '</i></p>' + 
             '<p>' + street + ', ' + city + ', ' + country + '</p>' +
-            '<p> Visitors now: "' + visitors + '"</p>' + 
-            '<p><a href="' + url + '">' + url + '</a></p>';
+            '<p> Visitors now: "' + visitors + '"</p>';
         infowindow.setContent(content);
 
     }).fail(function(e) {
@@ -104,6 +103,7 @@ var Venue = function(venue) {
     var marker = new google.maps.Marker({
         position: point,
         title: venue.title,
+        url:venue.url,
         map: map,
         animation: google.maps.Animation.DROP
     });
@@ -153,4 +153,3 @@ function mapLoadError() {
 function initApp() {
     ko.applyBindings(new ViewModel());
 }
-
