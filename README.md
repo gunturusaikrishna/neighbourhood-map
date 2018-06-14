@@ -36,4 +36,7 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 
 * Google Maps API
 
-* Foursquare Developer API
+* Foursquare Developer API 
+## HOW TO RUN:
+
+* Double click the index.html to run the project.
